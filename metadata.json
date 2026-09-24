@@ -1,0 +1,6 @@
+{
+  "name": "Eco-Reform - Climate-Resilient Prison Initiative",
+  "description": "TYCIA Foundation and New Horizons flagship program transforming prisons into climate-adaptive, sustainable, and rehabilitative spaces with 30 climate actions, legal aid, and prisoner wellbeing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
