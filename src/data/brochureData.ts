@@ -38,21 +38,65 @@ export const BROCHURE_PHOTOS = {
   // Official Eco-Reform Pan-India Prisons Under Pressure Climate Crisis Map
   prisonsClimateMap: '/prisons-climate-map.webp',
 
-  // Certification ceremony with participants, officers, and coordinators
-  heroCert: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAflcDxLjyOac-Kg0KnU1-NiWUlm4U6Fkt8D-RxZzYm0g0mTrXnXb0JCTHnOAcpBJ8Dx5LTcimWjZXCdNXqpfMhrb8mKIwO7N2mRRE1Af0c13qELwkog5xUnI1n-XfumdqjxqJ6G2PmWL8nDUcSCPL0yr6q7od6VGGQW38boXg5Bq7btgwF_tqJgeC-SHRc3j2QgW46pmYOzzNGSo2cgJD0ke48ncqbtiMhZU2wL3aYfJ0ARIuUHosycSJz5N_qjygQyA',
-  
-  // Inmates and coordinators crouching by raised soil beds
-  agroBed: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBau-3XU9ycBOY5S8CYdyddy47LNZkrkSHxYpyuGqQAx_L08VbUC_VWgvVnukQGfIPeHsDAlr8gudaPJxtMJeLRRe46GLxiL-VFsL1y038br5yVYk1ZUfVUvJXS4ZdMxNwWpxXaI5fWP7L6QilLjCgeOIz16F0sYFL2gz4Cxpz7Dn0LXanvUwzbtbXNqTvlP-rmsJ1pvN7ukADPBOxtp_UoGjjeyS3irFyxGfCSCtskbgEhEmO2s_1CVInSM9d7csxMUA',
-  
-  // Joint training between prison staff and inmates
-  staffTraining: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA-CKx2xUCpsDEBVM-2NrXj9sEGUHyG7IYYZzm7HNnuCVTL5kEvQ6sMra5nq3dZny0uI_M4YBiGpOpWjbghIayBALQaj1qdxfojLxc0klLX63nkEhgKwh7lDWgx9hIZHaWHfcpF9czX5-gIor7qekL3cp3e7GEPTpFJJuLxELVKHgpEtGfy1ZfrJQoxPteqNcCQfD5ZjpMGjnuCQXRYFS3mELcjcQxm5KMNLaezjrU1Z3iDY-hCCVRtWoujPWKsbZEeuA',
+  // Official rendered full pages of the brochure PDF
+  page1: '/brochure-page-1.webp',
+  page2: '/brochure-page-2.webp',
+  pdfDocument: '/eco-reform-brochure.pdf',
 
-  // Permaculture raised garden beds inside prison walls
-  gardenOverview: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDWZSX656pa_QcnqzDA03GzZ6qqanjgB7hrQhhQIqnWS-A5C1UCuXlfe8UQBGLaotg-cJZDS1rA7qh_EZCr-v_1pyKURNM8TniC3ldzFmszMrjR2CG6I852A5jwvtDr9YZNsUPoVWSPtO4doEWit4s1RY2oYg87w-MiJPZIpncjW4ieo7cNuylq2P1TPM6M_V78OITcmveH4QrXGBDDHmSSKFXYH5yltt4TFgFPux2ENOoFzFEh7iLUKqsNLfe_oJipuA',
+  // High-res cropped field photos directly from the official PDF publication
+  cohort: '/brochure-crop-cohort.webp',
+  team: '/brochure-crop-team.webp',
+  planting: '/brochure-crop-planting.webp',
+  courtyard: '/brochure-crop-courtyard.webp',
+  fertileBeeghasLogo: '/fertile-beeghas-logo.png',
 
-  // Award ceremony with prison superintendent & TYCIA team
-  handoverCert: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDtD_1y9jo3N3sWCseP6GcTzWnyW-EipXvwTVfbH1h1Y8CK8bPSj9HRO2vmyT9gRvjh1A-vXszYXm5PZmzFOrqJaA_1-BxUMzx8CkGaKRLAxvsDhnoF2dvgzT2gT9g32NDB6ztEu3jNgQq86qVZcOqO09LWf60NXrfQM0j3DWqebS6_ZIgyJkhNTqQPdBnoqmGfzTh-721z4qYMaRVHoMmaLTNN28Bvc7O-UyXd3ha7qDimb_xQw2xDjidn8x_MI0w8qg',
+  // Direct backwards-compatibility aliases
+  heroCert: '/brochure-crop-cohort.webp',
+  agroBed: '/brochure-crop-planting.webp',
+  staffTraining: '/brochure-crop-team.webp',
+  gardenOverview: '/brochure-crop-courtyard.webp',
+  handoverCert: '/brochure-crop-team.webp',
 };
+
+// Official Impact So Far Metrics directly from Page 1 of the new PDF
+export const BROCHURE_IMPACT_METRICS = [
+  { value: '2,069 m²', label: 'Land developed', icon: 'yard' },
+  { value: '20', label: 'Raised cultivation beds', icon: 'potted_plant' },
+  { value: '160', label: 'Water tanks protected', icon: 'shield_with_heart' },
+  { value: '13%', label: 'Estimated reduction in water evaporation', icon: 'water_drop' },
+  { value: '1', label: 'Prison Adoption', icon: 'domain' },
+  { value: '1', label: 'Composting unit', icon: 'recycling' },
+  { value: '120', label: 'Inmates trained', icon: 'group' },
+  { value: '9', label: 'Prison staff engaged', icon: 'badge' },
+];
+
+// Official 4-Pillar Approach directly from Page 2 of the new PDF
+export const BROCHURE_APPROACH_PILLARS = [
+  {
+    id: 'research',
+    title: 'RESEARCH & ASSESSMENT',
+    desc: 'Assessing climate risks, vulnerabilities and infrastructure gaps in prisons.',
+    icon: 'biotech'
+  },
+  {
+    id: 'interventions',
+    title: 'CLIMATE-RESILIENT INTERVENTIONS',
+    desc: 'Developing practical, need-based solutions for climate resilience.',
+    icon: 'construction'
+  },
+  {
+    id: 'education',
+    title: 'EDUCATION & CAPACITY BUILDING',
+    desc: 'Building climate awareness, skills and environmental responsibility.',
+    icon: 'school'
+  },
+  {
+    id: 'advocacy',
+    title: 'ADVOCACY FOR GREEN PRISONS',
+    desc: 'Promoting institutional adoption of sustainable prison practices.',
+    icon: 'campaign'
+  }
+];
 
 export const CHALLENGES = [
   {
@@ -64,7 +108,7 @@ export const CHALLENGES = [
   },
   {
     id: 'water',
-    title: 'WATER STRESS',
+    title: 'WATER ACCESS',
     icon: 'water_drop',
     color: '#0284c7',
     desc: 'Severe groundwater depletion, erratic municipal supply, and heavy peak load in sanitation blocks leave undertrials queuing for hours.'
