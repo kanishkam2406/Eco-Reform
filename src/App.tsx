@@ -30,7 +30,7 @@ export default function App() {
   const [selectedChallengeFilter, setSelectedChallengeFilter] = useState<'all' | 'thermal' | 'resource' | 'dignity'>('all');
   const [expandedAllChallenges, setExpandedAllChallenges] = useState(false);
   const [selectedMethodologyStep, setSelectedMethodologyStep] = useState<typeof METHODOLOGY_STEPS[0] | null>(null);
-  
+
   // Interactive Giving Calculator States
   const [calcAmount, setCalcAmount] = useState<number>(5000);
   const [copiedBankField, setCopiedBankField] = useState<string | null>(null);
@@ -73,25 +73,25 @@ export default function App() {
       />
 
       <main className="flex-1 pt-20">
-        
+
         {/* ========================================================= */}
         {/* 1. HERO SECTION (High-Impact Pitch Fold)                 */}
         {/* ========================================================= */}
-        <section id="hero" className="w-full bg-[#FAF9F5] pt-10 sm:pt-16 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 border-b border-[#D1C9BC]/70 relative overflow-hidden">
+        <section id="hero" className="w-full bg-[#FAF9F5] pt-10 sm:pt-16 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 border-b -mt-15 border-[#D1C9BC]/70 relative overflow-hidden">
           {/* Subtle Ambient Background Gradient */}
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#E2F3D9]/40 rounded-full blur-3xl pointer-events-none -z-10" />
           <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#E8E2D2]/30 rounded-full blur-3xl pointer-events-none -z-10" />
 
           <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-              
+
               {/* Pitch Copy Column: Lifted up equally with the map image */}
               <div className="lg:col-span-7 space-y-5 sm:space-y-6 flex flex-col justify-between">
-                
+
                 {/* Live Status Pill with Micro-Ping: Official Brochure Tagline */}
                 <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#EEEEE9] text-[#12560E] text-xs font-semibold uppercase tracking-wider border border-[#D1C9BC] shadow-2xs self-start">
                   <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7CA123] opacity-75" />
+                    <span className="animate-ping  absolute inline-flex h-full w-full rounded-full bg-[#7CA123] opacity-75" />
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#12560E]" />
                   </span>
                   <span>Towards Climate-Resilient Adaptive Prisons • Prioritising Prisoner Wellbeing</span>
@@ -188,8 +188,8 @@ export default function App() {
                     Rainmatter Foundation
                   </span>
                   <span className="flex items-center gap-1.5 bg-white px-2.5 py-1 rounded-md border border-[#D1C9BC]">
-                    <span className="material-symbols-outlined text-[14px] text-[#12560E]">newspaper</span>
-                    Factor Daily
+                    <span className="material-symbols-outlined text-[14px] text-[#12560E]">psychiatry</span>
+                    Fertile Beeghas
                   </span>
                 </div>
 
@@ -362,7 +362,7 @@ export default function App() {
         {/* ========================================================= */}
         <section id="crisis" className="w-full bg-[#F4F4EF] py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#D1C9BC]">
           <div className="max-w-7xl mx-auto space-y-10">
-            
+
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-2 max-w-2xl">
                 <div className="inline-flex items-center gap-2 text-xs font-bold text-[#703d00] uppercase tracking-wider">
@@ -396,17 +396,15 @@ export default function App() {
                   <button
                     key={tab.id}
                     onClick={() => setSelectedChallengeFilter(tab.id as any)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1.5 ${
-                      selectedChallengeFilter === tab.id
+                    className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1.5 ${selectedChallengeFilter === tab.id
                         ? 'bg-[#12560E] text-white shadow-xs'
                         : 'bg-white border border-[#D1C9BC] text-[#41493d] hover:bg-[#EEEEE9]'
-                    }`}
+                      }`}
                   >
                     <span>{tab.label}</span>
                     <span
-                      className={`text-[10px] px-1.5 py-0.2 rounded-full ${
-                        selectedChallengeFilter === tab.id ? 'bg-[#2E6F25] text-white' : 'bg-[#EEEEE9] text-[#717a6c]'
-                      }`}
+                      className={`text-[10px] px-1.5 py-0.2 rounded-full ${selectedChallengeFilter === tab.id ? 'bg-[#2E6F25] text-white' : 'bg-[#EEEEE9] text-[#717a6c]'
+                        }`}
                     >
                       {tab.count}
                     </span>
@@ -438,11 +436,10 @@ export default function App() {
                   <div
                     key={ch.id}
                     onClick={() => setSelectedChallengeId(selectedChallengeId === ch.id ? null : ch.id)}
-                    className={`bg-white p-5 rounded-2xl border transition-all duration-300 cursor-pointer relative group ${
-                      isSelected
+                    className={`bg-white p-5 rounded-2xl border transition-all duration-300 cursor-pointer relative group ${isSelected
                         ? 'border-[#12560E] shadow-md ring-2 ring-[#12560E]/20 bg-[#FBFDF9]'
                         : 'border-[#D1C9BC] hover:border-[#12560E] hover:shadow-md hover:-translate-y-1'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-center justify-between mb-3">
                       <div
@@ -505,7 +502,7 @@ export default function App() {
         {/* ========================================================= */}
         <section id="eco-reform" className="w-full bg-[#FAF9F5] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#D1C9BC]">
           <div className="max-w-7xl mx-auto space-y-14">
-            
+
             {/* Header & Strategic Quote */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-8 space-y-4">
@@ -697,7 +694,7 @@ export default function App() {
         {/* ========================================================= */}
         <section id="pathways" className="w-full bg-[#F4F4EF] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#D1C9BC]">
           <div className="max-w-7xl mx-auto space-y-10">
-            
+
             {/* Section Header with Micro-Tab Switcher */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-2 max-w-2xl">
@@ -716,11 +713,10 @@ export default function App() {
               <div className="inline-flex p-1.5 bg-white rounded-xl border border-[#D1C9BC] shadow-xs self-start md:self-auto">
                 <button
                   onClick={() => setActivePathwayTab('pillars')}
-                  className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 ${
-                    activePathwayTab === 'pillars'
+                  className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activePathwayTab === 'pillars'
                       ? 'bg-[#2E6F25] text-white shadow-xs'
                       : 'text-[#41493d] hover:text-[#1A1C19]'
-                  }`}
+                    }`}
                 >
                   <span className="material-symbols-outlined text-[16px]">domain</span>
                   Three Core Pillars
@@ -728,11 +724,10 @@ export default function App() {
 
                 <button
                   onClick={() => setActivePathwayTab('timeline')}
-                  className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 ${
-                    activePathwayTab === 'timeline'
+                  className={`px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 ${activePathwayTab === 'timeline'
                       ? 'bg-[#2E6F25] text-white shadow-xs'
                       : 'text-[#41493d] hover:text-[#1A1C19]'
-                  }`}
+                    }`}
                 >
                   <span className="material-symbols-outlined text-[16px]">route</span>
                   Replication Pathway
@@ -881,7 +876,7 @@ export default function App() {
         {/* ========================================================= */}
         <section id="impact" className="w-full bg-[#FAF9F5] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#D1C9BC]">
           <div className="max-w-7xl mx-auto space-y-12">
-            
+
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-2">
                 <span className="text-xs font-bold text-[#12560E] uppercase tracking-wider block">
@@ -1024,7 +1019,7 @@ export default function App() {
         <section id="heritage" className="w-full bg-[#F4F4EF] py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#D1C9BC]">
           <div className="max-w-7xl mx-auto space-y-12">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              
+
               <div className="lg:col-span-6 space-y-6">
                 <span className="text-xs font-bold text-[#12560E] uppercase tracking-wider block">
                   Turn Your Concern Into Action • Est. 2015
@@ -1067,8 +1062,7 @@ export default function App() {
                 </div>
 
                 <blockquote className="text-xs sm:text-sm text-[#1A1C19] italic leading-relaxed border-l-2 border-l-[#7CA123] pl-4">
-                  “When a person enters prison, our collective instinct is to look away. But real public safety is built
-                  by giving those inside the tools to return as protectors of their families, their neighborhoods, and their soil.”
+                  “Karan Kumar is a social-sector professional working at the intersection of prison reform, climate resilience, and community-led change. Through his work with the TYCIA Foundation and Project Second Chance, he recognized how extreme weather, water scarcity, and poor infrastructure severely impact incarcerated individuals and staff. This led him to found Eco-Reform, an initiative dedicated to transforming correctional institutions into climate-adaptive, sustainable, and rehabilitative spaces.”
                 </blockquote>
 
                 <div className="pt-4 border-t border-[#EEEEE9] grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#41493d]">
@@ -1105,7 +1099,7 @@ export default function App() {
         {/* ========================================================= */}
         <section id="partners" className="w-full bg-[#FAF9F5] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#D1C9BC]">
           <div className="max-w-7xl mx-auto space-y-12">
-            
+
             {/* Header Lockup */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="space-y-2 max-w-2xl">
@@ -1129,7 +1123,7 @@ export default function App() {
 
             {/* 2 Partner Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-              
+
               {/* Partner 1: Haryana Prisons */}
               <div className="bg-white rounded-2xl border border-[#D1C9BC] p-6 sm:p-8 lg:p-10 shadow-sm hover:shadow-md hover:border-[#12560E] transition-all flex flex-col justify-between space-y-6 group">
                 <div className="space-y-6">
@@ -1231,7 +1225,7 @@ export default function App() {
         {/* ========================================================= */}
         <section id="donate" className="w-full bg-[#FAF9F5] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#D1C9BC]">
           <div className="max-w-7xl mx-auto space-y-12">
-            
+
             <div className="text-center max-w-2xl mx-auto space-y-2">
               <span className="text-xs font-bold text-[#703d00] uppercase tracking-wider block">
                 Dignity in Giving
@@ -1250,9 +1244,8 @@ export default function App() {
               {DONATION_TIERS.map((tier) => (
                 <div
                   key={tier.id}
-                  className={`bg-white p-6 rounded-2xl border flex flex-col justify-between space-y-5 shadow-xs transition-all duration-300 relative group hover:-translate-y-1.5 hover:shadow-lg ${
-                    tier.recommended ? 'border-[#2E6F25] ring-2 ring-[#2E6F25]/20' : 'border-[#D1C9BC] hover:border-[#12560E]'
-                  }`}
+                  className={`bg-white p-6 rounded-2xl border flex flex-col justify-between space-y-5 shadow-xs transition-all duration-300 relative group hover:-translate-y-1.5 hover:shadow-lg ${tier.recommended ? 'border-[#2E6F25] ring-2 ring-[#2E6F25]/20' : 'border-[#D1C9BC] hover:border-[#12560E]'
+                    }`}
                 >
                   {tier.recommended && (
                     <span className="absolute -top-2.5 right-4 bg-[#2E6F25] text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
@@ -1289,11 +1282,10 @@ export default function App() {
 
                     <button
                       onClick={() => handleOpenDonateWithTier(tier.id)}
-                      className={`w-full py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors text-center ${
-                        tier.recommended
+                      className={`w-full py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors text-center ${tier.recommended
                           ? 'bg-[#2E6F25] hover:bg-[#12560E] text-white shadow-xs'
                           : 'bg-[#FAF9F5] border border-[#D1C9BC] hover:bg-[#2E6F25] hover:text-white text-[#1A1C19]'
-                      }`}
+                        }`}
                     >
                       Donate ₹{tier.amountInr.toLocaleString('en-IN')}
                     </button>
@@ -1334,11 +1326,10 @@ export default function App() {
                     <button
                       key={preset}
                       onClick={() => setCalcAmount(preset)}
-                      className={`px-3 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all shrink-0 ${
-                        calcAmount === preset
+                      className={`px-3 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all shrink-0 ${calcAmount === preset
                           ? 'bg-[#12560E] text-white shadow-xs scale-105'
                           : 'bg-[#FAF9F5] border border-[#D1C9BC] text-[#41493d] hover:bg-[#EEEEE9]'
-                      }`}
+                        }`}
                     >
                       ₹{preset.toLocaleString('en-IN')}
                     </button>
@@ -1441,27 +1432,24 @@ export default function App() {
                 <div
                   onMouseEnter={() => setActiveAllocationHover('direct')}
                   onMouseLeave={() => setActiveAllocationHover(null)}
-                  className={`bg-[#12560E] h-full rounded-l-full transition-all duration-200 cursor-pointer ${
-                    activeAllocationHover === 'direct' ? 'brightness-125 scale-y-125' : ''
-                  }`}
+                  className={`bg-[#12560E] h-full rounded-l-full transition-all duration-200 cursor-pointer ${activeAllocationHover === 'direct' ? 'brightness-125 scale-y-125' : ''
+                    }`}
                   style={{ width: '82%' }}
                   title="82% Direct Program Delivery (Cool Roofs, Permaculture & Waste Interventions)"
                 />
                 <div
                   onMouseEnter={() => setActiveAllocationHover('monitoring')}
                   onMouseLeave={() => setActiveAllocationHover(null)}
-                  className={`bg-[#7CA123] h-full transition-all duration-200 cursor-pointer ${
-                    activeAllocationHover === 'monitoring' ? 'brightness-125 scale-y-125' : ''
-                  }`}
+                  className={`bg-[#7CA123] h-full transition-all duration-200 cursor-pointer ${activeAllocationHover === 'monitoring' ? 'brightness-125 scale-y-125' : ''
+                    }`}
                   style={{ width: '11%' }}
                   title="11% Monitoring & Agronomists"
                 />
                 <div
                   onMouseEnter={() => setActiveAllocationHover('governance')}
                   onMouseLeave={() => setActiveAllocationHover(null)}
-                  className={`bg-[#703d00] h-full rounded-r-full transition-all duration-200 cursor-pointer ${
-                    activeAllocationHover === 'governance' ? 'brightness-125 scale-y-125' : ''
-                  }`}
+                  className={`bg-[#703d00] h-full rounded-r-full transition-all duration-200 cursor-pointer ${activeAllocationHover === 'governance' ? 'brightness-125 scale-y-125' : ''
+                    }`}
                   style={{ width: '7%' }}
                   title="7% Compliance & Statutory Audits"
                 />
@@ -1469,11 +1457,10 @@ export default function App() {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1 text-xs text-[#1A1C19]">
                 <div
-                  className={`p-3 rounded-xl border transition-all ${
-                    activeAllocationHover === 'direct'
+                  className={`p-3 rounded-xl border transition-all ${activeAllocationHover === 'direct'
                       ? 'bg-white border-[#12560E] shadow-sm'
                       : 'bg-transparent border-transparent'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#12560E] shrink-0" />
@@ -1485,11 +1472,10 @@ export default function App() {
                 </div>
 
                 <div
-                  className={`p-3 rounded-xl border transition-all ${
-                    activeAllocationHover === 'monitoring'
+                  className={`p-3 rounded-xl border transition-all ${activeAllocationHover === 'monitoring'
                       ? 'bg-white border-[#7CA123] shadow-sm'
                       : 'bg-transparent border-transparent'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#7CA123] shrink-0" />
@@ -1501,11 +1487,10 @@ export default function App() {
                 </div>
 
                 <div
-                  className={`p-3 rounded-xl border transition-all ${
-                    activeAllocationHover === 'governance'
+                  className={`p-3 rounded-xl border transition-all ${activeAllocationHover === 'governance'
                       ? 'bg-white border-[#703d00] shadow-sm'
                       : 'bg-transparent border-transparent'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#703d00] shrink-0" />
@@ -1627,9 +1612,9 @@ export default function App() {
       {/* ========================================================= */}
       <footer className="w-full bg-[#F4F4EF] text-[#41493d] border-t border-[#D1C9BC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10 space-y-10">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
-            
+
             {/* Column 1: Organization & Registration */}
             <div className="lg:col-span-5 space-y-4">
               <div className="space-y-2">
@@ -1642,7 +1627,7 @@ export default function App() {
                   TYCIA Foundation • Project Eco-Reform
                 </div>
               </div>
-              
+
               <p className="text-xs text-[#41493d] max-w-sm leading-relaxed">
                 Eco-Reform is TYCIA Foundation's flagship climate-resilience programme transforming prisons into
                 climate-adaptive, sustainable and rehabilitative spaces across India.
