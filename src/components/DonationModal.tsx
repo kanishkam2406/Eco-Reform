@@ -265,7 +265,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
             </div>
 
             {/* Custom Amount Input */}
-            <div className="space-y-1">
+            {/* <div className="space-y-1">
               <label className="text-xs font-semibold text-[#1A1C19] block">
                 Or Custom Contribution Amount ({currency}):
               </label>
@@ -283,10 +283,10 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                   className="w-full pl-8 pr-4 py-2 bg-white border border-[#D1C9BC] rounded-lg text-sm text-[#1A1C19] font-mono focus:outline-none focus:ring-2 focus:ring-[#2E6F25]"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Donor Information */}
-            <div className="space-y-3 pt-2 border-t border-[#EEEEE9]">
+            {/* <div className="space-y-3 pt-2 border-t border-[#EEEEE9]">
               <span className="text-xs font-semibold text-[#1A1C19] uppercase tracking-wider block">
                 Donor &amp; Tax Exemption Details
               </span>
@@ -329,7 +329,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                   className="w-full px-3 py-2 bg-white border border-[#D1C9BC] rounded-lg text-xs font-mono uppercase text-[#1A1C19] focus:outline-none focus:ring-2 focus:ring-[#2E6F25]"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Fund Allocation Bar */}
             <div className="bg-[#EEEEE9] p-3.5 rounded-xl border border-[#D1C9BC] space-y-1.5 text-xs text-[#41493d]">
@@ -350,13 +350,13 @@ export const DonationModal: React.FC<DonationModalProps> = ({
             </div>
 
             {/* Submit Button */}
-            <button
+            {/* <button
               type="submit"
               className="w-full py-3 bg-[#2E6F25] hover:bg-[#12560E] text-white font-semibold text-sm rounded-xl shadow-md transition-colors flex items-center justify-center gap-2"
             >
               <span className="material-symbols-outlined text-[18px]">lock</span>
               Proceed to Secure Contribution of {currency === 'INR' ? `₹${activeAmount.toLocaleString('en-IN')}` : `$${activeAmount}`}
-            </button>
+            </button> */}
           </form>
         ) : (
           /* Success & Mock 80G Receipt */

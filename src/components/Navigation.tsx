@@ -47,14 +47,13 @@ export const Navigation: React.FC<NavigationProps> = ({
 
   const navLinks = [
     { id: 'hero', label: 'Overview', href: '#hero' },
-    { id: 'crisis', label: 'The Crisis', href: '#crisis' },
-    { id: 'eco-reform', label: 'The Model', href: '#eco-reform' },
-    { id: 'facility-blueprint', label: 'Nuh Pilot Map', href: '#facility-blueprint' },
+    { id: 'crisis', label: 'Crisis', href: '#crisis' },
+    { id: 'eco-reform', label: 'Model', href: '#eco-reform' },
+    { id: 'facility-blueprint', label: 'Pilot Map', href: '#facility-blueprint' },
     { id: 'climate-actions', label: '30 Actions', href: '#climate-actions' },
-    { id: 'pathways', label: 'Reentry Pathway', href: '#pathways' },
-    { id: 'impact', label: 'Impact Proof', href: '#impact' },
+    { id: 'pathways', label: 'Pathways', href: '#pathways' },
+    { id: 'impact', label: 'Impact', href: '#impact' },
     { id: 'partners', label: 'Partners', href: '#partners' },
-    { id: 'donate', label: 'Support (80G)', href: '#donate' },
   ];
 
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -72,32 +71,32 @@ export const Navigation: React.FC<NavigationProps> = ({
         className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
           isScrolled
             ? 'bg-[#FAF9F5]/90 backdrop-blur-md shadow-sm border-b border-[#D1C9BC]/80 py-2'
-            : 'bg-[#FAF9F5]/95 backdrop-blur-sm border-b border-[#D1C9BC]/50 py-3'
+            : 'bg-[#FAF9F5]/95 backdrop-blur-sm border-b border-[#D1C9BC]/50 py-2.5 sm:py-3'
         }`}
       >
-      <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Left: Brand Logo & Trust Tag (Symmetrical flex-1 container) */}
-        <div className="flex items-center justify-start flex-1 min-w-0 shrink-0">
+      <div className="w-full max-w-[1536px] mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 xl:gap-4">
+        {/* Left: Brand Logo & Trust Tag */}
+        <div className="shrink-0 flex items-center">
           <a
             href="#hero"
             onClick={(e) => handleScrollTo(e, '#hero')}
-            className="flex items-center gap-2.5 text-left group py-1 focus:outline-none shrink-0"
+            className="flex items-center gap-2 text-left group py-1 focus:outline-none shrink-0"
             title="Eco-Reform - Towards Climate-Resilient Adaptive Prisons"
           >
             <img
               src="/logo.png"
               alt="Eco-Reform: Towards Climate-Resilient Adaptive Prisons"
-              className="h-8 sm:h-9 lg:h-10 w-auto max-w-[150px] sm:max-w-[180px] lg:max-w-[200px] object-contain transition-transform group-hover:scale-[1.02]"
+              className="h-7 sm:h-8 lg:h-9 w-auto max-w-[130px] sm:max-w-[160px] xl:max-w-[180px] object-contain transition-transform group-hover:scale-[1.02]"
             />
-            <span className="hidden 2xl:inline-flex items-center gap-1 font-semibold text-[#12560E] uppercase tracking-wider text-[10px] bg-[#E2F3D9] px-2 py-0.5 rounded-full">
+            <span className="hidden 2xl:inline-flex items-center gap-1 font-semibold text-[#12560E] uppercase tracking-wider text-[10px] bg-[#E2F3D9] px-2 py-0.5 rounded-full shrink-0">
               <span className="w-1.5 h-1.5 rounded-full bg-[#12560E] animate-pulse" />
               Nuh Pilot Active
             </span>
           </a>
         </div>
 
-        {/* Center: Desktop Anchor Navigation (Mathematically centered) */}
-        <nav className="hidden lg:flex items-center justify-center shrink-0 mx-2 xl:mx-4 gap-1 lg:gap-1.5 xl:gap-2.5 2xl:gap-3.5 text-[11px] xl:text-[11.5px] 2xl:text-xs font-semibold text-[#41493d]">
+        {/* Center: Desktop Anchor Navigation */}
+        <nav className="hidden lg:flex items-center justify-center flex-1 min-w-0 mx-1 xl:mx-3 gap-0.5 lg:gap-1 xl:gap-2 2xl:gap-3 text-[11px] xl:text-[11.5px] 2xl:text-xs font-semibold text-[#41493d]">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -105,7 +104,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                 key={link.id}
                 href={link.href}
                 onClick={(e) => handleScrollTo(e, link.href)}
-                className={`relative px-1.5 py-1 transition-colors hover:text-[#12560E] whitespace-nowrap ${
+                className={`relative px-1.5 xl:px-2 py-1 transition-colors hover:text-[#12560E] whitespace-nowrap shrink-0 ${
                   isActive ? 'text-[#12560E] font-bold' : ''
                 }`}
               >
@@ -118,8 +117,8 @@ export const Navigation: React.FC<NavigationProps> = ({
           })}
         </nav>
 
-        {/* Right: Action Controls & Triggers (Symmetrical flex-1 container) */}
-        <div className="flex items-center justify-end flex-1 min-w-0 shrink-0 gap-2 xl:gap-2.5">
+        {/* Right: Action Controls & Triggers */}
+        <div className="shrink-0 flex items-center justify-end gap-1.5 xl:gap-2.5">
           {/* Brochure Trigger Pill */}
           <button
             onClick={onOpenBrochure}
@@ -133,7 +132,7 @@ export const Navigation: React.FC<NavigationProps> = ({
           {/* Primary Donate (80G) CTA */}
           <button
             onClick={onOpenDonate}
-            className="inline-flex items-center gap-1.5 px-3 xl:px-4 py-1.5 xl:py-2 rounded-lg text-[11px] xl:text-xs font-semibold bg-[#2E6F25] text-white hover:bg-[#12560E] active:scale-[0.98] transition-all shadow-sm hover:shadow whitespace-nowrap shrink-0"
+            className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 xl:px-4 py-1.5 xl:py-2 rounded-lg text-[11px] xl:text-xs font-semibold bg-[#2E6F25] text-white hover:bg-[#12560E] active:scale-[0.98] transition-all shadow-sm hover:shadow whitespace-nowrap shrink-0"
           >
             <span className="material-symbols-outlined text-[15px] xl:text-[16px]">favorite</span>
             <span>Donate (80G)</span>
